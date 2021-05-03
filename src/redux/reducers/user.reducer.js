@@ -16,6 +16,7 @@ const userReducer = (state = initialState, action) => {
       return {
         ...state,
         errorMsg: action.payload,
+        data: [],
       };
     }
     default: {

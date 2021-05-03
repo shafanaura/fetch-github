@@ -8,7 +8,7 @@ export const userDetail = (name) => {
         payload: "",
         message: "",
       });
-      const response = await http().get(`users/${name}/repos`);
+      const response = await http().get(`users/${name}`);
       dispatch({
         type: "GET_USER",
         payload: response.data,
