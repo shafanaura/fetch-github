@@ -1,4 +1,5 @@
 const initialState = {
+  detail: {},
   data: [],
   message: "",
   errorMsg: "",
@@ -6,7 +7,13 @@ const initialState = {
 
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "GET_USER": {
+    case "GET_USER_DETAIL": {
+      return {
+        ...state,
+        detail: action.payload,
+      };
+    }
+    case "GET_USER_REPO": {
       return {
         ...state,
         data: action.payload,
